@@ -36,10 +36,18 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  var logos = ['apple.png', 'google.png', 'instagram.png'];
+  String? imageFile;
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      if (_counter >= 2) {
+        _counter = 0;
+      } else {
+        _counter++;
+      }
+      imageFile = logos[_counter];
+      print('Logo : $imageFile');
     });
   }
 
@@ -53,6 +61,14 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Image(
+              image: AssetImage('assets/$imageFile'),
+              width: 200.0,
+              height: 200.0,
+            ),
+            const SizedBox(
+              height: 100.0,
+            ),
             const Text(
               'You have pushed the button this many times:',
             ),
