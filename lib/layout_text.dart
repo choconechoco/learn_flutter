@@ -42,11 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
               width: double.infinity,
               child: Text(
-                'Choose your course right away',
-                style: TextStyle(
-                  fontSize: 9.0,
-                ),
-              ),
+                  'Choose your course right away',
+                  style: TextStyle(
+                    fontSize: 9.0,
+                  ),
+                  l),
             ),
           ),
           SizedBox(
