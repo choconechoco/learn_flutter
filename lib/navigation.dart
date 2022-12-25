@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home: MyNavigation()));
+  runApp(const MaterialApp(home: MyNavigation()));
 }
 
 class MyNavigation extends StatelessWidget {
