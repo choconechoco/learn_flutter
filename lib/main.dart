@@ -16,14 +16,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Layout Widgets',
-      // theme: ThemeData(
-      //   useMaterial3: true,
-      //   colorScheme: lightColorScheme,
-      // ),
-      // darkTheme: ThemeData(
-      //   useMaterial3: true,
-      //   colorScheme: darkColorScheme,
-      // ),
       home: const MyListWidgets(),
     );
   }
