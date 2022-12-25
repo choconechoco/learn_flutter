@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MaterialApp(
+    home: MyHomePage(),
+  ));
+}
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
@@ -35,233 +41,237 @@ class _MyHomePageState extends State<MyHomePage> {
           elevation: 0.0,
         ),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
-            child: Container(
-              width: double.infinity,
-              child: Text(
-                'Choose your course right away',
-                style: TextStyle(
-                  fontSize: 9.0,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
+              child: Container(
+                width: double.infinity,
+                child: Text(
+                  'Choose your course right away',
+                  style: TextStyle(
+                    fontSize: 9.0,
+                  ),
                 ),
               ),
             ),
-          ),
-          SizedBox(
-            child: Padding(
-              padding: const EdgeInsets.all(40.0),
-              child: SizedBox(
-                height: 40.0,
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.grey,
+            SizedBox(
+              child: Padding(
+                padding: const EdgeInsets.all(40.0),
+                child: SizedBox(
+                  height: 40.0,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                        ),
+                      ),
+                      labelText:
+                          'Search for your grade, course, training type ..',
+                      labelStyle: TextStyle(
+                        fontSize: 9.0,
                       ),
                     ),
-                    labelText:
-                        'Search for your grade, course, training type ..',
-                    labelStyle: TextStyle(
-                      fontSize: 9.0,
-                    ),
                   ),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Container(
-              child: Row(
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: Container(
+                child: Row(
+                  children: [
+                    Flexible(
+                      child: Container(
+                        height: 100,
+                        width: double.infinity,
+                        child: IconButton(
+                            icon: Image.asset('./assets/facebook.png'),
+                            onPressed: () {}),
+                      ),
+                      flex: 3,
+                    ),
+                    Flexible(
+                      child: Container(
+                        height: 100,
+                        width: double.infinity,
+                        child: Image.asset('./assets/instagram.png'),
+                      ),
+                      flex: 3,
+                    ),
+                    Flexible(
+                      child: Container(
+                        height: 100,
+                        width: double.infinity,
+                        child: Image.asset('./assets/linked.png'),
+                      ),
+                      flex: 3,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: Container(
+                child: Row(
+                  children: [
+                    Flexible(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 30,
+                        width: double.infinity,
+                        child: Text('Fackbook'),
+                      ),
+                      flex: 3,
+                    ),
+                    Flexible(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 30,
+                        width: double.infinity,
+                        child: Text('Instagram'),
+                      ),
+                      flex: 3,
+                    ),
+                    Flexible(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 30,
+                        width: double.infinity,
+                        child: Text('LinkedIn'),
+                      ),
+                      flex: 3,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: Container(
+                child: Row(
+                  children: [
+                    Flexible(
+                      child: Container(
+                        height: 100,
+                        width: double.infinity,
+                        child: Image.asset('./assets/wechat.png'),
+                      ),
+                      flex: 3,
+                    ),
+                    Flexible(
+                      child: Container(
+                        height: 100,
+                        width: double.infinity,
+                        child: Image.asset('./assets/tweter.png'),
+                      ),
+                      flex: 3,
+                    ),
+                    Flexible(
+                      child: Container(
+                        height: 100,
+                        width: double.infinity,
+                        child: Image.asset('./assets/apple.png'),
+                      ),
+                      flex: 3,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: Container(
+                child: Row(
+                  children: [
+                    Flexible(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 30,
+                        width: double.infinity,
+                        child: Text('WeChat'),
+                      ),
+                      flex: 3,
+                    ),
+                    Flexible(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 30,
+                        width: double.infinity,
+                        child: Text('Tweit'),
+                      ),
+                      flex: 3,
+                    ),
+                    Flexible(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 30,
+                        width: double.infinity,
+                        child: Text('Apple'),
+                      ),
+                      flex: 3,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Container(
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Flexible(
-                    child: Container(
-                      height: 100,
-                      width: double.infinity,
-                      child: Image.asset('./assets/facebook.png'),
+                  Text(
+                    'Recommended course',
+                    style: TextStyle(
+                      fontSize: 20,
                     ),
-                    flex: 3,
                   ),
-                  Flexible(
-                    child: Container(
-                      height: 100,
-                      width: double.infinity,
-                      child: Image.asset('./assets/instagram.png'),
-                    ),
-                    flex: 3,
+                  Text(
+                    'You may slso like',
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: 200.0,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(
+                    width: 160.0,
+                    color: Colors.red,
                   ),
-                  Flexible(
-                    child: Container(
-                      height: 100,
-                      width: double.infinity,
-                      child: Image.asset('./assets/linked.png'),
-                    ),
-                    flex: 3,
+                  Container(
+                    width: 160.0,
+                    color: Colors.blue,
+                  ),
+                  Container(
+                    width: 160.0,
+                    color: Colors.pink,
+                  ),
+                  Container(
+                    width: 160.0,
+                    color: Colors.green,
+                  ),
+                  Container(
+                    width: 160.0,
+                    color: Colors.black,
                   ),
                 ],
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Container(
-              child: Row(
-                children: [
-                  Flexible(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 30,
-                      width: double.infinity,
-                      child: Text('Fackbook'),
-                    ),
-                    flex: 3,
-                  ),
-                  Flexible(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 30,
-                      width: double.infinity,
-                      child: Text('Instagram'),
-                    ),
-                    flex: 3,
-                  ),
-                  Flexible(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 30,
-                      width: double.infinity,
-                      child: Text('LinkedIn'),
-                    ),
-                    flex: 3,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Container(
-              child: Row(
-                children: [
-                  Flexible(
-                    child: Container(
-                      height: 100,
-                      width: double.infinity,
-                      child: Image.asset('./assets/wechat.png'),
-                    ),
-                    flex: 3,
-                  ),
-                  Flexible(
-                    child: Container(
-                      height: 100,
-                      width: double.infinity,
-                      child: Image.asset('./assets/tweter.png'),
-                    ),
-                    flex: 3,
-                  ),
-                  Flexible(
-                    child: Container(
-                      height: 100,
-                      width: double.infinity,
-                      child: Image.asset('./assets/apple.png'),
-                    ),
-                    flex: 3,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Container(
-              child: Row(
-                children: [
-                  Flexible(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 30,
-                      width: double.infinity,
-                      child: Text('WeChat'),
-                    ),
-                    flex: 3,
-                  ),
-                  Flexible(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 30,
-                      width: double.infinity,
-                      child: Text('Tweit'),
-                    ),
-                    flex: 3,
-                  ),
-                  Flexible(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 30,
-                      width: double.infinity,
-                      child: Text('Apple'),
-                    ),
-                    flex: 3,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Container(
-            alignment: Alignment.centerLeft,
-            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Recommended course',
-                  style: TextStyle(
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  'You may slso like',
-                )
-              ],
-            ),
-          ),
-          Container(
-            height: 200.0,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                Container(
-                  width: 160.0,
-                  color: Colors.red,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.blue,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.pink,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.green,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.black,
-                ),
-              ],
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -299,6 +309,23 @@ class _MyHomePageState extends State<MyHomePage> {
             print(_selectedIndex);
           });
         },
+      ),
+    );
+  }
+}
+
+class PopupWindow extends StatelessWidget {
+  const PopupWindow({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      child: Container(
+        height: 200.0,
+        width: 300.0,
+        child: Center(
+          child: Text('Hellow Container Window'),
+        ),
       ),
     );
   }
