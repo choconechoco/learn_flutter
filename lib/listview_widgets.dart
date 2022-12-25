@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:csv/csv.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 class MyListWidgets extends StatefulWidget {
   const MyListWidgets({super.key});
@@ -12,7 +12,7 @@ class MyListWidgets extends StatefulWidget {
 class _MyListWidgetsState extends State<MyListWidgets> {
   List<List<dynamic>> _data = [];
   void _loadCSV() async {
-    final _rawData = await rootBundle.loadString('./assets/kindacode.csv');
+    final _rawData = await rootBundle.loadString('./assets/seoul.csv');
     List<List<dynamic>> _listData =
         const CsvToListConverter().convert(_rawData);
     setState(() {
