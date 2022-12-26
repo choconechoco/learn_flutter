@@ -14,9 +14,7 @@ class _MyTextState extends State<MyText> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: for(int i=0; i<10 ; i++){
-          Text('for $i');
-        },
+        child: Container(),
       ),
     );
   }
